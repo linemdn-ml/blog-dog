@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero container">
+    <div class="hero-text">
+        <p class="eyebrow">Золотистый ретривер · 1 год · девочка</p>
+        <h1>Привет, я <span class="accent">Луна</span> — и я исследую этот мир</h1>
+        <p class="lead">
+            Мне всего один год, но я уже успела съесть три тапка, найти лучшую палку в парке
+            и подружиться с половиной двора. Здесь я рассказываю о своих приключениях.
+        </p>
+        <div class="badges">
+            <span class="badge">🎾 12 мячиков</span>
+            <span class="badge">🌳 3 прогулки в день</span>
+            <span class="badge">💤 16 часов сна</span>
+        </div>
+        <div class="cta">
+            <a class="btn" href="{{ url_for('posts') }}">Читать записи</a>
+            <a class="btn btn-outline" href="{{ url_for('about') }}">Обо мне</a>
+        </div>
+    </div>
+    <div class="hero-img">
+        <img src="{{ url_for('static', filename='luna.jpg') }}" alt="Портрет Луны" width="600" height="600">
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="section-title">Свежие записи</h2>
+    <div class="posts">
+        {% for post in posts[:3] %}
+        <article class="card">
+            <div class="card-top {{ post.color }}">{{ post.emoji }}</div>
+            <div class="card-body">
+                <span class="date">{{ post.date }}</span>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    <div class="center">
+        <a class="btn btn-outline" href="{{ url_for('posts') }}">Все записи →</a>
+    </div>
+</section>
+
+{% endblock %}

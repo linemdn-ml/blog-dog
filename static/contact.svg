@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+    <rect width="400" height="320" fill="#fff8f5"/>
+    <ellipse cx="200" cy="290" rx="170" ry="20" fill="#ffe3ec"/>
+
+    <!-- ХВОСТ -->
+    <g>
+        <animateTransform attributeName="transform" type="rotate"
+            values="-25 130 230; 25 130 230; -25 130 230"
+            dur="0.4s" repeatCount="indefinite"/>
+        <path d="M150 230 Q100 245 82 205 Q72 175 98 168 Q118 165 135 190 Q142 210 150 230 Z"
+              fill="#e8b667" stroke="#c99a4a" stroke-width="2"/>
+    </g>
+
+    <!-- туловище -->
+    <ellipse cx="230" cy="225" rx="95" ry="58" fill="#f2c879"/>
+    <ellipse cx="230" cy="245" rx="72" ry="35" fill="#ffe4b5"/>
+
+    <!-- лапы -->
+    <ellipse cx="170" cy="275" rx="18" ry="11" fill="#d9a559"/>
+    <ellipse cx="230" cy="280" rx="20" ry="12" fill="#d9a559"/>
+    <ellipse cx="295" cy="275" rx="18" ry="11" fill="#d9a559"/>
+
+    <!-- голова -->
+    <circle cx="305" cy="170" r="60" fill="#f2c879"/>
+    <ellipse cx="320" cy="192" rx="34" ry="26" fill="#ffe4b5"/>
+
+    <!-- уши -->
+    <ellipse cx="268" cy="140" rx="22" ry="42" fill="#d9a559" transform="rotate(-15 268 140)"/>
+    <ellipse cx="342" cy="140" rx="22" ry="42" fill="#d9a559" transform="rotate(15 342 140)"/>
+
+    <!-- глаза -->
+    <circle cx="288" cy="162" r="7" fill="#3a2410"/>
+    <circle cx="290" cy="159" r="2.5" fill="#fff"/>
+    <circle cx="325" cy="162" r="7" fill="#3a2410"/>
+    <circle cx="327" cy="159" r="2.5" fill="#fff"/>
+
+    <!-- нос -->
+    <ellipse cx="333" cy="196" rx="8" ry="6" fill="#3a2410"/>
+
+    <!-- КОНВЕРТ в зубах -->
+    <g>
+        <animateTransform attributeName="transform" type="rotate"
+            values="-3 300 220; 3 300 220; -3 300 220"
+            dur="1.2s" repeatCount="indefinite"/>
+        <rect x="260" y="205" width="80" height="52" rx="5" fill="#fff" stroke="#ff6b9d" stroke-width="2.5"/>
+        <path d="M260 205 L300 235 L340 205" stroke="#ff6b9d" stroke-width="2.5" fill="none"/>
+        <circle cx="300" cy="235" r="3" fill="#e91e63"/>
+    </g>
+
+    <!-- бантик -->
+    <g transform="translate(352 130) rotate(10)">
+        <path d="M0 0 L-16 -10 L-16 10 Z" fill="#ff6b9d"/>
+        <path d="M0 0 L16 -10 L16 10 Z" fill="#ff6b9d"/>
+        <circle cx="0" cy="0" r="4" fill="#e91e63"/>
+    </g>
+</svg>

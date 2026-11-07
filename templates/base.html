@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Луна — блог золотистого ретривера{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="{{ url_for('index') }}">🐾 Луна</a>
+        <nav>
+            <a href="{{ url_for('index') }}">Главная</a>
+            <a href="{{ url_for('posts') }}">Записи</a>
+            <a href="{{ url_for('about') }}">Обо мне</a>
+            <a href="{{ url_for('contact') }}">Написать мне</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 Луна — золотистый ретривер. Сделано с любовью и печеньками 🦴</p>
+        <p class="small">Мне 1 год · Девочка · Санкт-Петербург</p>
+    </div>
+</footer>
+
+</body>
+</html>

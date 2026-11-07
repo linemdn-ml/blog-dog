@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Записи Луны{% endblock %}
+
+{% block content %}
+<section class="container">
+    <h1 class="page-title">Все мои записи 📖</h1>
+    <p class="page-sub">Тут собраны все мои приключения, начиная с зимы.</p>
+
+    <div class="page-hero">
+        <img src="{{ url_for('static', filename='posts.svg') }}" alt="Луна играет с мячиком">
+    </div>
+
+    <div class="posts">
+        {% for post in posts %}
+        <article class="card">
+            <div class="card-top {{ post.color }}">{{ post.emoji }}</div>
+            <div class="card-body">
+                <span class="date">{{ post.date }}</span>
+                <h3>{{ post.title }}</h3>
+                <p class="post-excerpt">{{ post.excerpt }}</p>
+                <p class="post-body">{{ post.body }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

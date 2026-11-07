@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Обо мне — Луна{% endblock %}
+
+{% block content %}
+<section class="container">
+    <h1 class="page-title">Обо мне 🐶</h1>
+
+    <div class="page-hero">
+        <img src="{{ url_for('static', filename='about.svg') }}" alt="Луна сидит">
+    </div>
+
+    <div class="about-card">
+        <p>
+            Меня зовут <strong>Луна</strong>. Мне <strong>1 год</strong>, я девочка
+            и самый настоящий золотистый ретривер. Живу в Санкт-Петербурге,
+            гуляю три раза в день и считаю, что каждый встречный — мой лучший друг.
+        </p>
+
+        <h3>Коротко о главном</h3>
+        <ul class="facts">
+            <li><strong>Возраст:</strong> 1 год</li>
+            <li><strong>Порода:</strong> золотистый ретривер</li>
+            <li><strong>Пол:</strong> девочка</li>
+            <li><strong>Город:</strong> Санкт-Петербург</li>
+        </ul>
+
+        <h3>Люблю</h3>
+        <ul class="facts">
+            <li>💧 Воду — любую, в любом количестве</li>
+            <li>🪵 Палки — особенно длинные</li>
+            <li>🧦 Носки хозяина (только левые, почему-то)</li>
+            <li>👶 Детей — они вкусно пахнут печеньем</li>
+        </ul>
+
+        <h3>Не люблю</h3>
+        <ul class="facts">
+            <li>🧹 Пылесос — это злой зверь</li>
+            <li>🛁 Купание в ванне (в озере — другое дело!)</li>
+            <li>⏰ Когда заканчивается корм</li>
+        </ul>
+
+        <blockquote class="quote">
+            «Жизнь — это мяч. Беги за ней!» — мой девиз
+        </blockquote>
+    </div>
+</section>
+{% endblock %}

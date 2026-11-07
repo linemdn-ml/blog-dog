@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Написать Луне{% endblock %}
+
+{% block content %}
+<section class="container">
+    <h1 class="page-title">Написать мне ✉️</h1>
+    <p class="page-sub">Пишите! Я читаю всё — правда, лапами не очень удобно, но хозяин помогает.</p>
+
+    <div class="page-hero">
+        <img src="{{ url_for('static', filename='contact.svg') }}" alt="Луна с конвертом">
+    </div>
+
+    <form class="contact-form" onsubmit="event.preventDefault(); alert('Гав! Спасибо за письмо, я обязательно отвечу 🐾');">
+        <label>Ваше имя
+            <input type="text" placeholder="Как вас зовут?" required>
+        </label>
+        <label>E-mail
+            <input type="email" placeholder="you@example.com" required>
+        </label>
+        <label>Сообщение
+            <textarea rows="5" placeholder="Привет, Луна! Хочу сказать..." required></textarea>
+        </label>
+        <button class="btn" type="submit">Отправить 🐾</button>
+    </form>
+
+    <div class="about-card contact-info">
+        <h3>Или найдите меня здесь:</h3>
+        <ul class="facts">
+            <li>📷 Instagram: <a href="#">@luna_golden_spb</a></li>
+            <li>📧 Email: <a href="#">luna@example.com</a></li>
+            <li>🐾 Парк у дома: каждый день в 7:00 и 19:00</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}
